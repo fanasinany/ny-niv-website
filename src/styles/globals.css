@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --light-text-primary: #000000;
+  --light-text-secondary: #535661;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #e8e7e7;
+  --animate-duration: 1000ms;
+}
+
+.red-color-theme {
+  --theme-color: #f43731;
+}
+
+.yellow-color-theme {
+  --theme-color: #fdc600;
+}
+
+.blue-color-theme {
+  --theme-color: #0048d5;
+}
+
+.green-color-theme {
+  --theme-color: #008036;
+}
+
+.orange-color-theme {
+  --theme-color: #ff6e00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 28px;
+  margin: 0;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-text-primary);
+  color: var(--light-text-primary);
+  overflow-x: hidden;
+  background-image: url("../images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-text-primary);
+  position: absolute;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0.98;
+}
+
+body.dark-mode::after {
+  background-color: #181818;
+}
+
+body.dark-mode {
+  color: var(--dark-text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* button */
+/* ::-webkit-scrollbar-button {
+    background: #222;
+  } */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: #999;
+}
+
+/* Resizer */
+::-webkit-resizer {
+  background: #111;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: #fcfcfd;
+  z-index: 3;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: #fcfcfd;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #191919;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.big-button {
+  background-color: var(--theme-color);
+  transition: transform 0.1s linear;
+  color: var(--dark-text-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 280px;
+  font-family: "Montserrat";
+  font-size: 17px;
+}
+
+.big-button:hover {
+  transform: translateY(-2px);
+}
+
+.center-vh {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-top {
+  position: relative;
+  font-weight: 700;
+}
+
+.title-top::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 70px;
+  background-color: var(--light-text-primary);
+  bottom: 0;
+  margin-left: 12px;
+}
+
+.title-top > svg {
+  margin-right: 8px;
+  position: relative;
+  top: 8px;
+}
+
+.dark-mode .title-top::after {
+  background-color: var(--dark-text-primary);
+}
+
+.margin-y {
+  padding: 60px 0;
+}
+
+#about {
+  margin: 32px 0 52px 0;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    max-width: unset;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .title-top {
+    overflow: hidden;
+  }
+
+  .title-top::after {
+    width: 60px;
+    margin-left: 8px;
+  }
+
+  .big-button {
+    width: 240px;
+  }
+
+  .margin-y {
+    padding: 30px 0;
+  }
+
+  header {
+    height: 76px;
+    border-bottom: 1px solid #e3e3e3ab;
+  }
+
+  .dark-mode header {
+    border-bottom: 1px solid #303030;
+  }
+}
+
+.gradiant-text {
+  background: -webkit-linear-gradient(#c16ae3, var(--theme-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .title-top {
+    line-height: 40px;
+  }
+}
