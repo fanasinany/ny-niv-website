@@ -97,9 +97,24 @@ export default function HTML(props) {
             __html: `
             var overlay = document.querySelector('body>.overlay');
 
-            window.addEventListener('load', function () {
-              overlay.classList.add('loaded');
-            });
+            if(typeof window !== "undefined"){
+              window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+
+              window.addEventListener('load', function () {
+                overlay.classList.add('loaded');
+              });
+            }
         
             (function () {
               var words = ["Front End Developer", "Expert Integrator Web", "UI / UX Designer"],
@@ -110,19 +125,6 @@ export default function HTML(props) {
                 });
               }, 2500)
             })();
-        
-            window.onclick = function (event) {
-              if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
-            }
           `,
           }}
         />
