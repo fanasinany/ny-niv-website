@@ -1,0 +1,174 @@
+.card-work {
+    width: 27%;
+    transition-duration: .5s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dark-mode .card-work {
+    box-shadow: rgb(0 0 0 / 48%) 0px 8px 24px;
+}
+
+.view-project {
+    color: var(--theme-color);
+    padding: 0px 6px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    position: absolute;
+    bottom: -40px;
+    right: 16px;
+    transition: bottom 0.3s;
+    transition-delay: 0.4s;
+    z-index: 2;
+}
+
+.view-project>svg {
+    margin-left: 4px;
+}
+
+.view-project::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-color);
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    opacity: 0.3;
+}
+
+.card-work:hover {
+    transform: scale(1.05);
+}
+
+.card-work:hover .view-project {
+    bottom: 10px;
+}
+
+.image-work {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.information-work {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.round-init-text {
+    height: 60px;
+    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-text-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.description-work {
+    margin-left: 20px;
+}
+
+.description-work>h3 {
+    margin: 0;
+}
+
+.description-work>span {
+    margin: 0;
+    font-size: 16px;
+}
+
+.tags-work {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    gap: 4px;
+}
+
+.tags-work>span {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #878787;
+    font-family: "Raleway";
+}
+
+@media(max-width: 1370px) {
+
+    .card-work {
+        width: 280px;
+    }
+}
+
+@media(max-width: 1075px) {
+    .card-work {
+        width: calc(50% - 64px);
+    }
+
+    .image-work {
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px) {
+    .card-work {
+        width: 100%;
+    }
+
+    .image-work {
+        height: 300px;
+    }
+
+    .view-project {
+        top: 28px;
+        right: 29px;
+        height: 30px;
+        color: white;
+    }
+
+    .view-project::after {
+        opacity: 0.8;
+    }
+}
+
+@media(max-width: 460px) {
+
+    .image-work {
+        height: 200px;
+    }
+
+    .description-work>h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .description-work>span {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .round-init-text {
+        height: 50px;
+        width: 50px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+.card-work {
+    --animate-duration: 1800ms;
+}

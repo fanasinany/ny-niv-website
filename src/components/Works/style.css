@@ -1,0 +1,91 @@
+.career-card-wrapper {
+  display: flex;
+  margin: 24px 0;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1370px) {
+  .career-card-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .career-card-wrapper {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .career-card-wrapper {
+    gap: 32px;
+  }
+}
+
+.switcher-wrapper {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.switcher-wrapper > button {
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #d9d9d9;
+  font-family: "Helvetica Now Display";
+  width: 120px;
+}
+
+.switcher-wrapper > button:focus-visible,
+.switcher-wrapper > button:focus {
+  outline: none;
+}
+
+.switcher-wrapper > button.all-filter {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.switcher-wrapper > button.web-project-filter {
+  border-right: none;
+}
+
+.switcher-wrapper > button.web-design-filter {
+  border-radius: 0 4px 4px 0;
+}
+
+.switcher-wrapper > button.active {
+  background-color: var(--theme-color);
+  color: var(--dark-text-primary);
+}
+
+@media (max-width: 410px) {
+  .switcher-wrapper {
+    display: flex;
+  }
+
+  .switcher-wrapper > button {
+    width: 33%;
+    font-size: 12px;
+  }
+}
+
+.dark-mode .switcher-wrapper > button {
+  border: 1px solid #363636;
+}
+
+.dark-mode .switcher-wrapper > button {
+  color: var(--dark-text-primary);
+}
+
+.career-card-wrapper > article {
+  transition: transform 0.4s ease;
+}
+
+.career-card-wrapper.show-wp > *:not(.card-wp),
+.career-card-wrapper.show-wd > *:not(.card-wd) {
+  transform: scale(0);
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}

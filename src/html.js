@@ -14,6 +14,10 @@ export default function HTML(props) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
           {`
+            body.hidebody{
+              overflow-y: hidden;
+            }
+
             body .overlay {
               position: fixed;
               width: 100vw;
@@ -72,7 +76,7 @@ export default function HTML(props) {
         </style>
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="orange-color-theme">
+      <body {...props.bodyAttributes} className="orange-color-theme hidebody">
         {props.preBodyComponents}
         <div
           key={`body`}

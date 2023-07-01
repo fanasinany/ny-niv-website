@@ -11,7 +11,7 @@ const About = () => {
     <section id="about">
       <div className="container">
         <div>
-          <h2 className="title-top wow animate__animated animate__bounceInLeft">
+          <h2 className="title-top">
             <TriangleIcon />I love being a web developer !"
           </h2>
           <p className="description">
@@ -20,7 +20,7 @@ const About = () => {
             in 2016, and until now I have done a lot of web projects.
           </p>
           <div className="card-wrapper">
-            <article className="card-service webdev-section wow animate__animated animate__bounceInLeft">
+            <article className="card-service webdev-section">
               <div className="icon-box">
                 <WebDev />
               </div>
@@ -32,7 +32,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service responsive-section wow animate__animated animate__bounceInRight">
+            <article className="card-service responsive-section">
               <div className="icon-box">
                 <ResponsiveDesign />
               </div>
@@ -44,7 +44,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service cleancode-section wow animate__animated animate__bounceInLeft">
+            <article className="card-service cleancode-section">
               <div className="icon-box stroke-svg">
                 <CleanCode />
               </div>
@@ -56,7 +56,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service webdesign-section  wow animate__animated animate__bounceInRight">
+            <article className="card-service webdesign-section ">
               <div className="icon-box">
                 <WebDesign />
               </div>

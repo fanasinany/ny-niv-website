@@ -30,7 +30,7 @@ const Home = () => {
       <div className="container center-vh">
         <div className="home-container">
           <div className="title-and-desc">
-            <h1 className="wow animate__animated animate__bounceInLeft">
+            <h1>
               <span className="animate-hello">Hello, I'm Ny!</span> <br />I{" "}
               <span className="gradiant-text">build things</span> for the web.
             </h1>
