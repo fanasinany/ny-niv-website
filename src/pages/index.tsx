@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/globals.css";
 import Home from "../components/Home";
+import About from "../components/About";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header />
       <main>
         <Home />
+        <About />
       </main>
       <Footer />
     </React.Fragment>

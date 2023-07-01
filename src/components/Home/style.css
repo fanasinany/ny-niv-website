@@ -17,12 +17,13 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 64px;
-    font-family: "Pathway Extreme";
+    font-family: "Raleway";
 }
 
 .title-and-desc>p {
     font-size: 24px;
     margin: 40px 0;
+    font-family: "Raleway";
 }
 
 .big-button>svg {

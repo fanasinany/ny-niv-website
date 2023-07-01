@@ -290,7 +290,7 @@ const Header = () => {
         <nav className="navbar">
           <div className="nav-left">
             <a href="/">
-             NyNiv.
+             Ny.
             </a>
           </div>
           <MenuLink closeDrawer={setIsOpen} />

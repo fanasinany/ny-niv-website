@@ -16,7 +16,7 @@
 .nav-left>a {
     font-size: 25px;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Raleway";
     display: flex;
 }
 
@@ -31,7 +31,7 @@
     margin: 0 28px;
     position: relative;
     transition: color 0.3s ease;
-    font-family: "Montserrat";
+    font-family: "Raleway";
 }
 
 .nav-center>li>a>svg {
@@ -65,7 +65,7 @@
     width: 150px;
     margin-right: 16px;
     background-color: #27273c;
-    font-family: "Montserrat";
+    font-family: "Raleway";
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@
 }
 
 .btn-language {
-    font-family: 'Montserrat';
+    font-family: 'Raleway';
     font-size: 16px;
     display: flex;
     align-items: center;
