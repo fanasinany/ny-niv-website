@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
