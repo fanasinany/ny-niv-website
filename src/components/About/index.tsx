@@ -15,9 +15,12 @@ const About = () => {
             <TriangleIcon />I love being a web developer !"
           </h2>
           <p className="description">
-            My name is Ny Nivoarijaona, a passionate of IT and UI/UX. I'm 25
-            years old and currently working in the web field. I started coding
-            in 2016, and until now I have done a lot of web projects.
+            My name is Ny Nivoarijaona, as a front-end developer and UI/UX
+            designer, I'm passionate about creating exceptional user
+            experiences. With a solid background in web development, I strive to
+            combine visually appealing aesthetics with optimal functionality. My
+            goal is to create intuitive, user-friendly interfaces that captivate
+            users and enhance their interaction with digital products.
           </p>
           <div className="card-wrapper">
             <article className="card-service webdev-section">
