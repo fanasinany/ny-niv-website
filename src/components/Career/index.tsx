@@ -15,7 +15,7 @@ const Career = () => {
     <section id="career">
       <div className="container">
         <div className="margin-y">
-          <h2 className="title-top">
+          <h2 className="title-top" data-aos="zoom-in">
             <RoundIcon />
             Wanna know my background ?
           </h2>
@@ -38,13 +38,22 @@ const Career = () => {
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3
+                  className="vertical-timeline-element-title"
+                  data-aos="fade-right"
+                >
                   Intern Developer
                 </h3>
-                <p className="vertical-timeline-element-subtitle">
+                <p
+                  className="vertical-timeline-element-subtitle"
+                  data-aos="fade-right"
+                >
                   AUXIMAD Madagascar.
                 </p>
-                <p className="vertical-timeline-element-description">
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-right"
+                >
                   Development of a platform for monitoring transit files of
                   AUXIMAD Madagascar | Thesis for the diploma of engineering in
                   computer science.
@@ -67,11 +76,22 @@ const Career = () => {
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
-                <h3 className="vertical-timeline-element-title">IT Engineer</h3>
-                <p className="vertical-timeline-element-subtitle">
+                <h3
+                  className="vertical-timeline-element-title"
+                  data-aos="fade-left"
+                >
+                  IT Engineer
+                </h3>
+                <p
+                  className="vertical-timeline-element-subtitle"
+                  data-aos="fade-left"
+                >
                   Ecole Nationale d'Informatique, ENI Fianarantsoa.
                 </p>
-                <p className="vertical-timeline-element-description">
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-left"
+                >
                   Graduation with a degree in computer engineering.
                 </p>
               </VerticalTimelineElement>
@@ -92,13 +112,22 @@ const Career = () => {
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3
+                  className="vertical-timeline-element-title"
+                  data-aos="fade-right"
+                >
                   Fullstack Developer
                 </h3>
-                <p className="vertical-timeline-element-subtitle">
+                <p
+                  className="vertical-timeline-element-subtitle"
+                  data-aos="fade-right"
+                >
                   Logia Studio Madagascar.
                 </p>
-                <p className="vertical-timeline-element-description">
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-right"
+                >
                   As a Full-Stack Developer, Worked on end to end software
                   development life cycle process- from analysis to coding,
                   testing and release.
@@ -113,13 +142,22 @@ const Career = () => {
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3
+                  className="vertical-timeline-element-title"
+                  data-aos="fade-left"
+                >
                   Front end Developer
                 </h3>
-                <p className="vertical-timeline-element-subtitle">
+                <p
+                  className="vertical-timeline-element-subtitle"
+                  data-aos="fade-left"
+                >
                   Hairun Technology, Madagascar.
                 </p>
-                <p className="vertical-timeline-element-description">
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-left"
+                >
                   Creates web pages following the mock-ups of a graphic designer
                   or webdesigner while ensuring responsiveness, SEO and W3C
                   standards.
@@ -128,15 +166,15 @@ const Career = () => {
             </VerticalTimeline>
           </div>
           <div className="skills">
-            <h2 className="title-top">
+            <h2 className="title-top" data-aos="zoom-in">
               <SquareIcon />
               My skills
             </h2>
-            <p className="descrip-skills">
+            <p className="descrip-skills" data-aos="fade-right">
               Here are a few technologies I've been working recently .
             </p>
             <div className="skills-wrapper">
-              <div>
+              <div data-aos="zoom-in">
                 <h3 className="title-skills">Technology Web</h3>
                 <ul className="list-skills">
                   <li>
@@ -398,7 +436,7 @@ const Career = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div data-aos="zoom-in">
                 <h3 className="title-skills">Library</h3>
                 <ul className="list-skills">
                   <li>
@@ -485,7 +523,7 @@ const Career = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div data-aos="zoom-in">
                 <h3 className="title-skills">Framework</h3>
                 <ul className="list-skills">
                   <li>
@@ -574,7 +612,7 @@ const Career = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div data-aos="zoom-in">
                 <h3 className="title-skills">User Interface (UI)</h3>
                 <ul className="list-skills">
                   <li>

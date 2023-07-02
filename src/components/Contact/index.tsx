@@ -105,7 +105,7 @@ const Contact = () => {
       <div className="container">
         <div className="margin-y">
           <div className="contact-wrapper">
-            <div className="form-contact">
+            <div className="form-contact" data-aos="fade-right">
               <h2 className="title-top">
                 <RoundIcon />
                 Get In Touch
@@ -182,7 +182,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-            <div className="information-contact">
+            <div className="information-contact" data-aos="fade-left">
               <div className="baobab-img"></div>
               <div className="info-complete">
                 <div>

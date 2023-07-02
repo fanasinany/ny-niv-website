@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
   }, []);
 
   React.useEffect(() => {
-    AOS.init();
+    AOS.init({duration: 600});
     AOS.refresh();
   }, []);
 

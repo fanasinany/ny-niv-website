@@ -23,11 +23,11 @@ const Works = () => {
     <section id="works">
       <div className="container">
         <div className="margin-y">
-          <h2 className="title-top">
+          <h2 className="title-top" data-aos="zoom-in">
             <TriangleIcon />
             Some projects I've built.
           </h2>
-          <p className="description">
+          <p className="description" data-aos="fade-right">
             I am pleased to present a selection of my recent development
             projects. These projects have been developed with different
             technologies and skills to solve various problems. Feel free to

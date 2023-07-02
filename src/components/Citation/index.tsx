@@ -49,19 +49,20 @@ const Citation = () => {
         <div className="margin-y">
           <hr className="line-separator"></hr>
           <div className="citation-wrapper">
-            <div className="photo-ny">
+            <div className="photo-ny" data-aos="fade-right">
               <img src={photo} alt="Ny Niv" />
             </div>
-            <div className="citation-details">
+            <div className="citation-details" data-aos="fade-left">
               <p className="developer-quote">
-                “Never turn down an opportunity for fear of not being up to the job.”
+                “Never turn down an opportunity for fear of not being up to the
+                job.”
               </p>
               <p>-</p>
               <p>Unkown</p>
             </div>
           </div>
           <hr className="line-separator"></hr>
-          <div className="avis-wrapper">
+          <div className="avis-wrapper" data-aos="zoom-in-down">
             <h1>What do you think of my portfolio?</h1>
             <p>
               Tell me below what you think of this site, whether it's a positive

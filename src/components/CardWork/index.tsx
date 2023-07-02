@@ -23,7 +23,7 @@ const CardWork: FC<CardWorkProps> = ({
   classTag,
 }) => {
   return (
-    <article className={`card-work card-${classTag}`}>
+    <article className={`card-work card-${classTag}`} data-aos="flip-up">
       <img src={imageLink} className="image-work" alt="thumbnail-work" />
       <div className="information-work">
         <div className="round-init-text" style={{ backgroundColor: bgColor }}>

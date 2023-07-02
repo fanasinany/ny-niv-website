@@ -23,7 +23,7 @@ const About = () => {
             users and enhance their interaction with digital products.
           </p>
           <div className="card-wrapper">
-            <article className="card-service webdev-section"  data-aos="fade-right">
+            <article className="card-service webdev-section" data-aos="fade-right">
               <div className="icon-box">
                 <WebDev />
               </div>

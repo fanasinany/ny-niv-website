@@ -269,3 +269,12 @@ h2 {
     line-height: 40px;
   }
 }
+
+#home,
+#about,
+#career,
+#works,
+#contact,
+#citation {
+  overflow-x: hidden;
+}
