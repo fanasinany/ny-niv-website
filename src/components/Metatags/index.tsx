@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import imageMeta from "../../images/face.jpg";
 
 function Metatags() {
   return (
@@ -18,7 +19,7 @@ function Metatags() {
         property="og:description"
         content="A young boy passionate of IT and UI/UX. I'm a Developer Front End and a Web Designer too."
       />
-      <meta property="og:image" content="src/images/face.jpg" />
+      <meta property="og:image" content={imageMeta} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://www.ny-nivoarijaona.com" />
@@ -30,7 +31,7 @@ function Metatags() {
         property="twitter:description"
         content="A young boy passionate of IT and UI/UX. I'm a Developer Front End and a Web Designer too."
       />
-      <meta property="twitter:image" content="src/images/face.jpg" />
+      <meta property="twitter:image" content={imageMeta} />
     </Helmet>
   );
 }
