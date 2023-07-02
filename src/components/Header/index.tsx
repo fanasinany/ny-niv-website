@@ -2,7 +2,7 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import Drawer from "react-modern-drawer";
 import "./style.css";
 import "react-modern-drawer/dist/index.css";
-import ActiveMenuLink from "active-menu-link";
+// import ActiveMenuLink from "active-menu-link";
 
 interface MenuLinkProps {
   isMobile?: boolean;
@@ -269,14 +269,14 @@ const Header = () => {
     });
   }, []);
 
-  useEffect(() => {
-    let options = {
-      activeClass: "active",
-    };
+  // useEffect(() => {
+  //   let options = {
+  //     activeClass: "active",
+  //   };
 
-    new ActiveMenuLink(".navbar", options);
-    new ActiveMenuLink(".drawer-wrapper", options);
-  }, []);
+  //   new ActiveMenuLink(".navbar", options);
+  //   new ActiveMenuLink(".drawer-wrapper", options);
+  // }, []);
 
   const showDropdown = () => {
     document.getElementById("myDropdown")?.classList.toggle("show");
