@@ -11,6 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
           {`
             body.hidebody{
@@ -91,6 +92,39 @@ export default function HTML(props) {
           <div></div>
           <div></div>
         </div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            var overlay = document.querySelector('body>.overlay');
+            document.addEventListener('DOMContentLoaded', function () {
+              overlay.classList.add('loaded');
+            });
+
+            document.addEventListener('click', function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            });           
+        
+            (function () {
+              var words = ["Front End Developer", "Expert Integrator Web", "UI / UX Designer"],
+                i = 0;
+              setInterval(function () {
+                $('#words-change').slideUp(function () {
+                  $(this).html(words[(i = (i + 1) % words.length)]).slideDown();
+                });
+              }, 2500)
+            })();
+          `,
+          }}
+        />
         {props.postBodyComponents}
       </body>
     </html>

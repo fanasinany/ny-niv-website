@@ -254,21 +254,6 @@ const Header = () => {
     checkAndChangeTheme();
   }, [isLight]);
 
-  useEffect(() => {
-    document.addEventListener("click", (event: Event) => {
-      const target = event.target as HTMLElement;
-      if (!target.matches(".dropbtn")) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          const openDropdown = dropdowns[i] as HTMLElement;
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
-        }
-      }
-    });
-  }, []);
-
   // useEffect(() => {
   //   let options = {
   //     activeClass: "active",
