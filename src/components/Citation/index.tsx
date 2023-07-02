@@ -32,7 +32,7 @@ const Citation = () => {
             "mmyr7KX9ldWW28TT7"
           )
           .then(() => {
-            toast.success("Merci!J'ai bien reçu votre avis!");
+            toast.success("Thank you very much for your advice!");
             setAvis("");
           })
           .catch(() => {
