@@ -2,7 +2,6 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import Drawer from "react-modern-drawer";
 import "./style.css";
 import "react-modern-drawer/dist/index.css";
-// import ActiveMenuLink from "active-menu-link";
 
 interface MenuLinkProps {
   isMobile?: boolean;
@@ -10,10 +9,64 @@ interface MenuLinkProps {
 }
 
 const MenuLink: FC<MenuLinkProps> = ({ isMobile, closeDrawer }) => {
+  const [activeLink, setActiveLink] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeSection = document.getElementById("home");
+      const aboutSection = document.getElementById("about");
+      const careerSection = document.getElementById("career");
+      const workSection = document.getElementById("works");
+
+      const scrollPosition = window.pageYOffset;
+
+      if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        scrollPosition >= homeSection.offsetTop &&
+        scrollPosition < aboutSection.offsetTop
+      ) {
+        setActiveLink("home");
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        scrollPosition >= aboutSection.offsetTop &&
+        scrollPosition < careerSection.offsetTop
+      ) {
+        setActiveLink("about");
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        scrollPosition >= careerSection.offsetTop &&
+        scrollPosition < workSection.offsetTop
+      ) {
+        setActiveLink("career");
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        scrollPosition >= workSection.offsetTop
+      ) {
+        setActiveLink("works");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <ul className={`nav-center navbar-items ${isMobile && "show-menu-mobile"}`}>
       <li>
-        <a href="#home" onClick={() => closeDrawer(false)}>
+        <a href="#home" className={activeLink === 'home' ? 'active' : ''} onClick={() => closeDrawer(false)}>
           {isMobile && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +96,7 @@ const MenuLink: FC<MenuLinkProps> = ({ isMobile, closeDrawer }) => {
         </a>
       </li>
       <li>
-        <a href="#about" onClick={() => closeDrawer(false)}>
+        <a href="#about" className={activeLink === 'about' ? 'active' : ''} onClick={() => closeDrawer(false)}>
           {isMobile && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +126,7 @@ const MenuLink: FC<MenuLinkProps> = ({ isMobile, closeDrawer }) => {
         </a>
       </li>
       <li>
-        <a href="#career" onClick={() => closeDrawer(false)}>
+        <a href="#career" className={activeLink === 'career' ? 'active' : ''} onClick={() => closeDrawer(false)}>
           {isMobile && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +190,7 @@ const MenuLink: FC<MenuLinkProps> = ({ isMobile, closeDrawer }) => {
         </a>
       </li>
       <li>
-        <a href="#works" onClick={() => closeDrawer(false)}>
+        <a href="#works" className={activeLink === 'works' ? 'active' : ''} onClick={() => closeDrawer(false)}>
           {isMobile && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -254,15 +307,6 @@ const Header = () => {
     checkAndChangeTheme();
   }, [isLight]);
 
-  // useEffect(() => {
-  //   let options = {
-  //     activeClass: "active",
-  //   };
-
-  //   new ActiveMenuLink(".navbar", options);
-  //   new ActiveMenuLink(".drawer-wrapper", options);
-  // }, []);
-
   const showDropdown = () => {
     document.getElementById("myDropdown")?.classList.toggle("show");
   };
@@ -334,7 +378,6 @@ const Header = () => {
                 ></span>
               </div>
             </div>
-            <button className="btn-language">EN</button>
             <button className="btn-menu" onClick={toggleDrawer}>
               {isOpen ? (
                 <svg

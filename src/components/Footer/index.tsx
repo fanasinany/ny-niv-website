@@ -1,16 +1,7 @@
-// import ActiveMenuLink from "active-menu-link";
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.css";
 
 const Footer = () => {
-  // useEffect(() => {
-  //   let options = {
-  //     activeClass: "active",
-  //   };
-
-  //   new ActiveMenuLink(".pagination", options);
-  // }, []);
-
   return (
     <React.Fragment>
       <footer>
