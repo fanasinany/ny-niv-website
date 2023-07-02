@@ -23,6 +23,17 @@ const Home = () => {
         text.style.left = e.pageX + "px";
       }
     });
+
+    const words: string[] = ["Front End Developer", "Expert Integrator Web", "UI / UX Designer"];
+    let i: number = 0;
+    const wordsChangeElement: HTMLElement | null = document.getElementById('words-change');
+    if (wordsChangeElement) {
+      setInterval(() => {
+        wordsChangeElement.style.display = 'none';
+        wordsChangeElement.innerHTML = words[(i = (i + 1) % words.length)];
+        wordsChangeElement.style.display = 'block';
+      }, 2500);
+    }
   }, []);
 
   return (

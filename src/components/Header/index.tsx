@@ -255,6 +255,21 @@ const Header = () => {
   }, [isLight]);
 
   useEffect(() => {
+    document.addEventListener("click", (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (!target.matches(".dropbtn")) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i] as HTMLElement;
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     let options = {
       activeClass: "active",
     };
@@ -289,9 +304,7 @@ const Header = () => {
       <header>
         <nav className="navbar">
           <div className="nav-left">
-            <a href="/">
-             Ny.
-            </a>
+            <a href="/">Ny.</a>
           </div>
           <MenuLink closeDrawer={setIsOpen} />
           <div className="nav-right">
