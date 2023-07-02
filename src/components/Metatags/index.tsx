@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import imageMeta from "../../images/face.jpg";
+import imageMeta from "../../images/face.webp";
 
 function Metatags() {
   return (

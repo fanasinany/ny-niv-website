@@ -42,7 +42,7 @@ body {
   background-color: var(--dark-text-primary);
   color: var(--light-text-primary);
   overflow-x: hidden;
-  background-image: url("../images/bg.jpg");
+  background-image: url("../images/bg.webp");
   background-attachment: fixed;
   background-size: cover;
   position: relative;

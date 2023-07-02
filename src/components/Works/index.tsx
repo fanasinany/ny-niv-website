@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import CardWork from "../CardWork";
 import "./style.css";
-import svgImage from "../../images/works/svg-store.jpg";
-import qrImage from "../../images/works/qrcode.jpg";
-import frontImage from "../../images/works/skyline.jpg";
-import zionImage from "../../images/works/zion.jpg";
-import portfolioImage from "../../images/works/ny-nivoarijaona.jpg";
-import lrImage from "../../images/works/lrcrea.jpg";
-import feAdvice from "../../images/works/fm-advice-generator.jpg";
-import feQrcode from "../../images/works/fm-qrcode.jpg";
-import wdSpaceFiesta from "../../images/works/wd-spacefiesta.jpg";
-import wdZion from "../../images/works/wd-ziontwo.jpg";
-import wdTravelAgency from "../../images/works/wd-travelagency.jpg";
-import coriandreImage from "../../images/works/coriandre.jpg";
-import mampii from "../../images/works/mampii.png";
-import belone from "../../images/works/belone.png";
+import svgImage from "../../images/works/svg-store.webp";
+import qrImage from "../../images/works/qrcode.webp";
+import frontImage from "../../images/works/skyline.webp";
+import zionImage from "../../images/works/zion.webp";
+import portfolioImage from "../../images/works/ny-nivoarijaona.webp";
+import lrImage from "../../images/works/lrcrea.webp";
+import feAdvice from "../../images/works/fm-advice-generator.webp";
+import feQrcode from "../../images/works/fm-qrcode.webp";
+import wdSpaceFiesta from "../../images/works/wd-spacefiesta.webp";
+import wdZion from "../../images/works/wd-ziontwo.webp";
+import wdTravelAgency from "../../images/works/wd-travelagency.webp";
+import coriandreImage from "../../images/works/coriandre.webp";
+import mampii from "../../images/works/mampii.webp";
+import belone from "../../images/works/belone.webp";
 import TriangleIcon from "../Icons/TriangleIcon";
 
 const Works = () => {

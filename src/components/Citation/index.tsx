@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./style.css";
-import photo from "../../images/4x4.jpg";
+import photo from "../../images/4x4.webp";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { HashLoader } from "react-spinners";
@@ -50,7 +50,7 @@ const Citation = () => {
           <hr className="line-separator"></hr>
           <div className="citation-wrapper">
             <div className="photo-ny">
-              <img src={photo} alt="4x4" />
+              <img src={photo} alt="Ny Niv" />
             </div>
             <div className="citation-details">
               <p className="developer-quote">
