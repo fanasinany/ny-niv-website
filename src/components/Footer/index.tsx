@@ -1,38 +1,98 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
+import IcRoundArrowDownward from "../Icons/IcRoundArrowDownward";
 
 const Footer = () => {
+  const [activeLink, setActiveLink] = useState(1);
+
+  const [valueMenu, setValueMenu] = useState([
+    "home",
+    "about",
+    "career",
+    "works",
+    "contact",
+  ]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeSection = document.getElementById("home");
+      const aboutSection = document.getElementById("about");
+      const careerSection = document.getElementById("career");
+      const workSection = document.getElementById("works");
+      const contactSection = document.getElementById("contact");
+
+      const scrollPosition = window.pageYOffset;
+
+      if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        contactSection &&
+        scrollPosition >= homeSection.offsetTop &&
+        scrollPosition < aboutSection.offsetTop
+      ) {
+        setActiveLink(1);
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        contactSection &&
+        scrollPosition >= aboutSection.offsetTop &&
+        scrollPosition < careerSection.offsetTop
+      ) {
+        setActiveLink(2);
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        contactSection &&
+        scrollPosition >= careerSection.offsetTop &&
+        scrollPosition < workSection.offsetTop
+      ) {
+        setActiveLink(3);
+      } else if (
+        homeSection &&
+        aboutSection &&
+        careerSection &&
+        workSection &&
+        contactSection &&
+        scrollPosition >= workSection.offsetTop &&
+        scrollPosition < contactSection.offsetTop
+      ) {
+        setActiveLink(4);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const innerHeight = window.innerHeight;
+      const totalHeight = document.body.offsetHeight;
+
+      if (scrollY + innerHeight >= totalHeight) {
+        setActiveLink(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <React.Fragment>
       <footer>
         <div className="footer-wrapper">
-          <div className="pagination">
-            <li>
-              <a href="#home">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#career">
-                <span>Career</span>
-              </a>
-            </li>
-            <li>
-              <a href="#works">
-                <span>Works</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                <span>Contact</span>
-              </a>
-            </li>
-          </div>
           <div className="social-link">
             <a
               href="mailto:nynivoarijaona@gmail.com"
@@ -181,6 +241,12 @@ const Footer = () => {
               </svg>
             </a>
           </div>
+          <a
+            href={`#${valueMenu[activeLink]}`}
+            className={`pagination ${activeLink === 0 && "last-page"}`}
+          >
+            <IcRoundArrowDownward />
+          </a>
         </div>
       </footer>
     </React.Fragment>

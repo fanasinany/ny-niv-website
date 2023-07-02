@@ -12,27 +12,15 @@
 .pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
+    color: var(--theme-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.pagination>li>a {
-    margin-right: 12px;
-    display: flex;
-    height: 12px;
-    width: 12px;
-    background-color: var(--theme-color);
-    border-radius: 4px;
-    transition: 0.3s linear;
-    opacity: 0.3;
-}
-
-.pagination>li>a.active{
-    background-color: var(--theme-color);
-    opacity: 1;
-}
-
-.pagination>li>a>span {
-    display: none;
+.pagination.last-page{
+    transform: rotate(180deg);
 }
 
 .social-link {
