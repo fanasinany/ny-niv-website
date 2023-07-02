@@ -94,25 +94,7 @@ export default function HTML(props) {
         </div>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-            var overlay = document.querySelector('body>.overlay');
-            document.addEventListener('DOMContentLoaded', function () {
-              overlay.classList.add('loaded');
-            });
-
-            document.addEventListener('click', function(event) {
-              if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
-            });           
-        
+            __html: `        
             (function () {
               var words = ["Front End Developer", "Expert Integrator Web", "UI / UX Designer"],
                 i = 0;
