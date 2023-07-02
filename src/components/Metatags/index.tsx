@@ -1,11 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import imageMeta from "../../images/face.webp";
+import iconTag from "../../images/favicon.png";
 
 function Metatags() {
   return (
     <Helmet>
       <title>Ny Nivoarijaona - Website Developer</title>
+      <link rel="icon" href={iconTag} />
       <meta name="title" content="Ny Nivoarijaona - Website Developer" />
       <meta
         name="description"

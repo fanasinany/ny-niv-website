@@ -9,6 +9,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import RoundIcon from "../Icons/RoundIcon";
 import SquareIcon from "../Icons/SquareIcon";
+import MaterialSymbolsAndroidGoogleHome from "../Icons/MaterialSymbolsAndroidGoogleHome";
 
 const Career = () => {
   return (
@@ -137,7 +138,7 @@ const Career = () => {
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={"2021 - 2023"}
+                date={"2021"}
                 icon={<>HRT</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
@@ -161,6 +162,35 @@ const Career = () => {
                   Creates web pages following the mock-ups of a graphic designer
                   or webdesigner while ensuring responsiveness, SEO and W3C
                   standards.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-content"
+                contentStyle={{ background: "#f3f3f3", color: "#535661" }}
+                contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
+                date={"2023"}
+                icon={<MaterialSymbolsAndroidGoogleHome />}
+                dateClassName="date-timeline"
+                iconClassName="icon-timeline"
+              >
+                <h3
+                  className="vertical-timeline-element-title"
+                  data-aos="fade-left"
+                >
+                  UI/UX Designer - Front end Developer
+                </h3>
+                <p
+                  className="vertical-timeline-element-subtitle"
+                  data-aos="fade-left"
+                >
+                  At Home
+                </p>
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-left"
+                >
+                  I'm currently working from home as a UI/UX Designer and
+                  front-end developer consultant.
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>
