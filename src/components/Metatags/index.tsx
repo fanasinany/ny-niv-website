@@ -32,6 +32,19 @@ function Metatags() {
         content="A young boy passionate of IT and UI/UX. I'm a Developer Front End and a Web Designer too."
       />
       <meta property="twitter:image" content={imageMeta} />
+
+      <meta
+        name="description"
+        content="A Frontend developer located in Madagascar."
+      />
+      <meta
+        name="keywords"
+        content="Ny Nivoarijaona, Ny Niv, NyNivoarijaona, NyNiv, Ny"
+      />
+      <meta
+        property="og:keywords"
+        content="Ny Nivoarijaona, Ny Niv, NyNivoarijaona, NyNiv, Ny"
+      />
     </Helmet>
   );
 }
