@@ -10,6 +10,8 @@ import Contact from "../components/Contact";
 import Citation from "../components/Citation";
 import Works from "../components/Works";
 import Metatags from "../components/Metatags";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const IndexPage: React.FC<PageProps> = () => {
   React.useEffect(() => {
@@ -18,6 +20,12 @@ const IndexPage: React.FC<PageProps> = () => {
     var overlay = document.querySelector("body>.overlay");
     overlay?.classList.add("loaded");
   }, []);
+
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <React.Fragment>
       <Metatags />

@@ -11,10 +11,10 @@ const About = () => {
     <section id="about">
       <div className="container">
         <div>
-          <h2 className="title-top">
+          <h2 className="title-top" data-aos="fade-right">
             <TriangleIcon />I love being a web developer !"
           </h2>
-          <p className="description">
+          <p className="description" data-aos="fade-right">
             My name is Ny Nivoarijaona, as a front-end developer and UI/UX
             designer, I'm passionate about creating exceptional user
             experiences. With a solid background in web development, I strive to
@@ -23,7 +23,7 @@ const About = () => {
             users and enhance their interaction with digital products.
           </p>
           <div className="card-wrapper">
-            <article className="card-service webdev-section">
+            <article className="card-service webdev-section"  data-aos="fade-right">
               <div className="icon-box">
                 <WebDev />
               </div>
@@ -35,7 +35,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service responsive-section">
+            <article className="card-service responsive-section" data-aos="fade-left">
               <div className="icon-box">
                 <ResponsiveDesign />
               </div>
@@ -47,7 +47,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service cleancode-section">
+            <article className="card-service cleancode-section" data-aos="fade-right">
               <div className="icon-box stroke-svg">
                 <CleanCode />
               </div>
@@ -59,7 +59,7 @@ const About = () => {
                 </p>
               </div>
             </article>
-            <article className="card-service webdesign-section ">
+            <article className="card-service webdesign-section" data-aos="fade-left">
               <div className="icon-box">
                 <WebDesign />
               </div>
