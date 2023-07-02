@@ -103,6 +103,19 @@ export default function HTML(props) {
                   $(this).html(words[(i = (i + 1) % words.length)]).slideDown();
                 });
               }, 2500)
+
+              window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
             })();
           `,
           }}
