@@ -2,7 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Ny Nivoarijaona Website`,
+    title: `Ny Nivoarijaona`,
+    description: `Ny Nivoarijaona - Website Portfolio`,
     siteUrl: `https://www.ny-nivoarijaona.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -10,7 +11,6 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -18,6 +18,12 @@ const config: GatsbyConfig = {
         trackingIds: [
           "G-YG378CEMJE", // Google Analytics / GA
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.png",
       },
     },
   ],
