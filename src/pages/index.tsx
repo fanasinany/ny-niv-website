@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
         />
         <meta
           property="og:image"
-          content="../images/face.jpg"
+          content="src/images/face.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@ const IndexPage: React.FC<PageProps> = () => {
         />
         <meta
           property="twitter:image"
-          content="../images/face.jpg"
+          content="src/images/face.jpg"
         />
       </Helmet>
       <Header />
