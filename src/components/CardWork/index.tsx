@@ -59,6 +59,37 @@ const CardWork: FC<CardWorkProps> = ({
           />
         </svg>
       </a>
+      {url !== "#" ? (
+        <a href={url} target="_blank" rel="noreferrer" className="view-project">
+          View project
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </a>
+      ) : (
+        <a href="#" rel="noreferrer" className="view-project">
+          View project
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+        </a>
+      )}
     </article>
   );
 };

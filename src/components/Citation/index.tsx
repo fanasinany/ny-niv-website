@@ -54,18 +54,17 @@ const Citation = () => {
             </div>
             <div className="citation-details">
               <p className="developer-quote">
-                “Every great developer you know got there by solving problems
-                they were unqualified to solve until they actually did it.”
+                “Never turn down an opportunity for fear of not being up to the job.”
               </p>
               <p>-</p>
-              <p>Patrick McKenzie</p>
+              <p>Unkown</p>
             </div>
           </div>
           <hr className="line-separator"></hr>
           <div className="avis-wrapper">
             <h1>What do you think of my portfolio?</h1>
             <p>
-              Tell us below what you think of this site, whether it's a positive
+              Tell me below what you think of this site, whether it's a positive
               or negative review!
             </p>
             <form ref={form} onSubmit={sendEmail}>

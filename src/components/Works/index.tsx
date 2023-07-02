@@ -13,6 +13,8 @@ import wdSpaceFiesta from "../../images/works/wd-spacefiesta.jpg";
 import wdZion from "../../images/works/wd-ziontwo.jpg";
 import wdTravelAgency from "../../images/works/wd-travelagency.jpg";
 import coriandreImage from "../../images/works/coriandre.jpg";
+import mampii from "../../images/works/mampii.png";
+import belone from "../../images/works/belone.png";
 import TriangleIcon from "../Icons/TriangleIcon";
 
 const Works = () => {
@@ -59,6 +61,26 @@ const Works = () => {
           <div className={`career-card-wrapper show-${activefilter}`}>
             <CardWork
               classTag="wp"
+              title="Mampii Photography"
+              tags={["gatsby", "html", "css"]}
+              description="A photographer's website called Mampii."
+              initial="M"
+              bgColor="#8E7497"
+              imageLink={mampii}
+              url="https://www.mampii.com/"
+            />
+            <CardWork
+              classTag="wd"
+              title="Belone Studio"
+              tags={["Adobe XD"]}
+              description="Web design for Belone Studio."
+              initial="B"
+              bgColor="#2f1458"
+              imageLink={belone}
+              url="#"
+            />
+            <CardWork
+              classTag="wp"
               title="SVG Generator"
               tags={["reactjs", "html", "css", "nodejs", "mysql"]}
               description="A platform to store SVG icons."
@@ -88,14 +110,14 @@ const Works = () => {
               url="https://qr-code-by-ny.vercel.app/"
             />
             <CardWork
-              classTag="wd"
+              classTag="wp"
               title="Travel Agency"
-              tags={["Adobe XD"]}
-              description="Web design for a Travel Agency"
+              tags={["html", "css"]}
+              description="Travel agency showcase site."
               initial="T"
               bgColor="#318194"
-              imageLink={wdTravelAgency}
-              url="https://xd.adobe.com/view/5ccc87ae-41b9-462c-ad1f-c3802b7ea266-099f/"
+              imageLink={coriandreImage}
+              url="https://coriandre.netlify.app/"
             />
             <CardWork
               classTag="wp"
@@ -148,14 +170,14 @@ const Works = () => {
               url="https://fanasinany.github.io/fa-mentor-advice-generator"
             />
             <CardWork
-              classTag="wp"
+              classTag="wd"
               title="Travel Agency"
-              tags={["html", "css"]}
-              description="Site vitrine d'un agence de voyage"
+              tags={["Adobe XD"]}
+              description="Web design for a Travel Agency"
               initial="T"
               bgColor="#318194"
-              imageLink={coriandreImage}
-              url="https://coriandre.netlify.app/"
+              imageLink={wdTravelAgency}
+              url="https://xd.adobe.com/view/5ccc87ae-41b9-462c-ad1f-c3802b7ea266-099f/"
             />
             <CardWork
               classTag="wp"
