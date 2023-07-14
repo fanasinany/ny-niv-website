@@ -4,12 +4,14 @@ import photo from "../../images/4x4.webp";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { HashLoader } from "react-spinners";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Citation = () => {
   const form = useRef<HTMLFormElement>(null);
   const [avis, setAvis] = useState("");
   const [messageError, setMessageError] = useState(false);
   const [loading, setloading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState("");
   const handleChangeAvis = (e: any) => {
     if (e.target.value !== "") {
       setMessageError(false);
@@ -22,6 +24,10 @@ const Citation = () => {
     if (avis === "") {
       setMessageError(true);
     } else {
+      if (captchaValue === "") {
+        // La réponse CAPTCHA n'a pas été remplie, affichez un message d'erreur ou effectuez une action appropriée
+        return;
+      }
       if (form.current) {
         setloading(true);
         emailjs
@@ -41,6 +47,10 @@ const Citation = () => {
           .finally(() => setloading(false));
       }
     }
+  };
+
+  const handleRecaptchaChange = (response: any) => {
+    setCaptchaValue(response);
   };
 
   return (
@@ -83,10 +93,16 @@ const Citation = () => {
                   (*) Please fill in the empty fields.
                 </span>
               )}
+              <div className="captcha-wrapper">
+                <ReCAPTCHA
+                  sitekey="6LdulyMnAAAAAC9aWm_q_sb7q9ESiY8XJ9mm2CIA"
+                  onChange={handleRecaptchaChange}
+                />
+              </div>
               <button
                 disabled={loading}
                 type="submit"
-                className="big-button btn-send"
+                className="big-button btn-send btn-with-captcha"
               >
                 {loading ? (
                   <HashLoader color="#46dff0" size={30} loading={loading} />

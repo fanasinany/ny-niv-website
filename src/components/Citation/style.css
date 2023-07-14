@@ -157,3 +157,11 @@
         width: 100%;
     }
 }
+
+.captcha-wrapper{
+    margin-top: 8px;
+}
+
+.btn-send.btn-with-captcha{
+    margin-top: 8px;
+}
