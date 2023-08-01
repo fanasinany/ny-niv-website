@@ -51,6 +51,7 @@ const Citation = () => {
 
   const handleRecaptchaChange = (response: any) => {
     setCaptchaValue(response);
+    console.log(response)
   };
 
   return (
@@ -95,7 +96,7 @@ const Citation = () => {
               )}
               <div className="captcha-wrapper">
                 <ReCAPTCHA
-                  sitekey="6LdulyMnAAAAAC9aWm_q_sb7q9ESiY8XJ9mm2CIA"
+                  sitekey="6LdIt3InAAAAABBmL_4GSHmK95JNOQ3V8ELdl-Rg"
                   onChange={handleRecaptchaChange}
                 />
               </div>
