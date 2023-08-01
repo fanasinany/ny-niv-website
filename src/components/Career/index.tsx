@@ -26,54 +26,45 @@ const Career = () => {
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={
-                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                }
-                icon={<>AUX</>}
+                date={"2023"}
+                icon={<MaterialSymbolsAndroidGoogleHome />}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
                 <h3
                   className="vertical-timeline-element-title"
-                  data-aos="fade-right"
+                  data-aos="fade-left"
                 >
-                  Intern Developer
+                  UI/UX Designer - Front end Developer
                 </h3>
                 <p
                   className="vertical-timeline-element-subtitle"
-                  data-aos="fade-right"
+                  data-aos="fade-left"
                 >
-                  AUXIMAD Madagascar.
+                  At Home
                 </p>
                 <p
                   className="vertical-timeline-element-description"
-                  data-aos="fade-right"
+                  data-aos="fade-left"
                 >
-                  Development of a platform for monitoring transit files of
-                  AUXIMAD Madagascar | Thesis for the diploma of engineering in
-                  computer science.
+                  I'm currently working from home as a UI/UX Designer and
+                  front-end developer consultant.
+                </p>
+                <p
+                  className="vertical-timeline-element-description"
+                  data-aos="fade-left"
+                >
+                  NIF : 3013605717
+                  <br />
+                  STAT : 74908212023000908
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={
-                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                }
-                icon={<>ENI</>}
+                date={"2021"}
+                icon={<>HRT</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
@@ -81,19 +72,21 @@ const Career = () => {
                   className="vertical-timeline-element-title"
                   data-aos="fade-left"
                 >
-                  IT Engineer
+                  Front end Developer
                 </h3>
                 <p
                   className="vertical-timeline-element-subtitle"
                   data-aos="fade-left"
                 >
-                  Ecole Nationale d'Informatique, ENI Fianarantsoa.
+                  Hairun Technology, Madagascar.
                 </p>
                 <p
                   className="vertical-timeline-element-description"
                   data-aos="fade-left"
                 >
-                  Graduation with a degree in computer engineering.
+                  Creates web pages following the mock-ups of a graphic designer
+                  or webdesigner while ensuring responsiveness, SEO and W3C
+                  standards.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -138,8 +131,16 @@ const Career = () => {
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={"2021"}
-                icon={<>HRT</>}
+                date={
+                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                }
+                icon={<>ENI</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
@@ -147,50 +148,57 @@ const Career = () => {
                   className="vertical-timeline-element-title"
                   data-aos="fade-left"
                 >
-                  Front end Developer
+                  IT Engineer
                 </h3>
                 <p
                   className="vertical-timeline-element-subtitle"
                   data-aos="fade-left"
                 >
-                  Hairun Technology, Madagascar.
+                  Ecole Nationale d'Informatique, ENI Fianarantsoa.
                 </p>
                 <p
                   className="vertical-timeline-element-description"
                   data-aos="fade-left"
                 >
-                  Creates web pages following the mock-ups of a graphic designer
-                  or webdesigner while ensuring responsiveness, SEO and W3C
-                  standards.
+                  Graduation with a degree in computer engineering.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={"2023"}
-                icon={<MaterialSymbolsAndroidGoogleHome />}
+                date={
+                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                }
+                icon={<>AUX</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
               >
                 <h3
                   className="vertical-timeline-element-title"
-                  data-aos="fade-left"
+                  data-aos="fade-right"
                 >
-                  UI/UX Designer - Front end Developer
+                  Intern Developer
                 </h3>
                 <p
                   className="vertical-timeline-element-subtitle"
-                  data-aos="fade-left"
+                  data-aos="fade-right"
                 >
-                  At Home
+                  AUXIMAD Madagascar.
                 </p>
                 <p
                   className="vertical-timeline-element-description"
-                  data-aos="fade-left"
+                  data-aos="fade-right"
                 >
-                  I'm currently working from home as a UI/UX Designer and
-                  front-end developer consultant.
+                  Development of a platform for monitoring transit files of
+                  AUXIMAD Madagascar | Thesis for the diploma of engineering in
+                  computer science.
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>

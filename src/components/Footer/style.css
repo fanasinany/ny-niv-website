@@ -76,3 +76,30 @@
         margin-right: 10px;
     }
 }
+
+.foot-left{
+    display: flex;
+    align-items: flex-end;
+}
+
+.nif-stat{
+    font-size: 12px;
+    margin-right: 16px;
+    color: #8f8f8f;
+    line-height: 16px;
+}
+
+@media(max-width: 550px) {
+    .footer-wrapper{
+        flex-direction: column;
+    }
+
+    .foot-left>a{
+        display: none;
+    }
+
+    .nif-stat{
+        text-align: center;
+        margin-top: 12px;
+    }
+}

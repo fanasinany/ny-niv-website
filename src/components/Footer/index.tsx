@@ -241,12 +241,18 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <a
-            href={`#${valueMenu[activeLink]}`}
-            className={`pagination ${activeLink === 0 && "last-page"}`}
-          >
-            <IcRoundArrowDownward />
-          </a>
+          <div className="foot-left">
+            <span className="nif-stat">
+              NIF:3013605717
+              / STAT:74908212023000908
+            </span>
+            <a
+              href={`#${valueMenu[activeLink]}`}
+              className={`pagination ${activeLink === 0 && "last-page"}`}
+            >
+              <IcRoundArrowDownward />
+            </a>
+          </div>
         </div>
       </footer>
     </React.Fragment>

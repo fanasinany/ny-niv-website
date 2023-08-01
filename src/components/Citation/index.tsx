@@ -51,7 +51,6 @@ const Citation = () => {
 
   const handleRecaptchaChange = (response: any) => {
     setCaptchaValue(response);
-    console.log(response)
   };
 
   return (
