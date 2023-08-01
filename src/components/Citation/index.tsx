@@ -12,6 +12,7 @@ const Citation = () => {
   const [messageError, setMessageError] = useState(false);
   const [loading, setloading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState("");
+  const [captchaError, setCaptchaError] = useState(false);
   const handleChangeAvis = (e: any) => {
     if (e.target.value !== "") {
       setMessageError(false);
@@ -26,6 +27,7 @@ const Citation = () => {
     } else {
       if (captchaValue === "") {
         // La réponse CAPTCHA n'a pas été remplie, affichez un message d'erreur ou effectuez une action appropriée
+        setCaptchaError(true);
         return;
       }
       if (form.current) {
@@ -51,6 +53,9 @@ const Citation = () => {
 
   const handleRecaptchaChange = (response: any) => {
     setCaptchaValue(response);
+    if (response != "") {
+      setCaptchaError(false);
+    }
   };
 
   return (
@@ -98,6 +103,13 @@ const Citation = () => {
                   sitekey="6LdIt3InAAAAABBmL_4GSHmK95JNOQ3V8ELdl-Rg"
                   onChange={handleRecaptchaChange}
                 />
+                {captchaError ? (
+                  <span className="error-message">
+                    (*) Captcha Error, Try again
+                  </span>
+                ) : (
+                  ""
+                )}
               </div>
               <button
                 disabled={loading}
