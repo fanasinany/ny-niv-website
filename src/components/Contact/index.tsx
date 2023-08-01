@@ -5,6 +5,7 @@ import { HashLoader } from "react-spinners";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import RoundIcon from "../Icons/RoundIcon";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -21,6 +22,7 @@ const Contact = () => {
   const [emailError, setEmailError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
   const [messageError, setMessageError] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState("");
 
   const handleChangeFirstname = (e: any) => {
     if (e.target.value !== "") {
@@ -80,6 +82,10 @@ const Contact = () => {
       subject !== "" &&
       message !== ""
     ) {
+      if (captchaValue === "") {
+        // La réponse CAPTCHA n'a pas été remplie, affichez un message d'erreur ou effectuez une action appropriée
+        return;
+      }
       if (form.current) {
         setloading(true);
         emailjs
@@ -98,6 +104,10 @@ const Contact = () => {
           .finally(() => setloading(false));
       }
     }
+  };
+
+  const handleRecaptchaChange = (response: any) => {
+    setCaptchaValue(response);
   };
 
   return (
@@ -169,6 +179,12 @@ const Contact = () => {
                     (*) Please fill in the empty fields.
                   </span>
                 )}
+                <div className="captcha-wrapper">
+                  <ReCAPTCHA
+                    sitekey="6LdIt3InAAAAABBmL_4GSHmK95JNOQ3V8ELdl-Rg"
+                    onChange={handleRecaptchaChange}
+                  />
+                </div>
                 <button
                   disabled={loading}
                   type="submit"
