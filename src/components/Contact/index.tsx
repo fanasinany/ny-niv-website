@@ -23,6 +23,7 @@ const Contact = () => {
   const [subjectError, setSubjectError] = useState(false);
   const [messageError, setMessageError] = useState(false);
   const [captchaValue, setCaptchaValue] = useState("");
+  const [captchaError, setCaptchaError] = useState(false);
 
   const handleChangeFirstname = (e: any) => {
     if (e.target.value !== "") {
@@ -84,6 +85,7 @@ const Contact = () => {
     ) {
       if (captchaValue === "") {
         // La réponse CAPTCHA n'a pas été remplie, affichez un message d'erreur ou effectuez une action appropriée
+        setCaptchaError(true);
         return;
       }
       if (form.current) {
@@ -108,6 +110,9 @@ const Contact = () => {
 
   const handleRecaptchaChange = (response: any) => {
     setCaptchaValue(response);
+    if (response != "") {
+      setCaptchaError(false);
+    }
   };
 
   return (
@@ -184,6 +189,13 @@ const Contact = () => {
                     sitekey="6LdIt3InAAAAABBmL_4GSHmK95JNOQ3V8ELdl-Rg"
                     onChange={handleRecaptchaChange}
                   />
+                  {captchaError ? (
+                    <span className="error-message">
+                      (*) Captcha Error, Try again
+                    </span>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <button
                   disabled={loading}
