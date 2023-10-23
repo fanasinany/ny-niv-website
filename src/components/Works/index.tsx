@@ -39,7 +39,7 @@ const Works = () => {
               className={`all-filter ${activefilter === "all" ? "active" : ""}`}
               onClick={() => setActiveFilter("all")}
             >
-              Tous
+              All
             </button>
             <button
               className={`web-project-filter ${
