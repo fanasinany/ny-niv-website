@@ -117,7 +117,7 @@ const Works = () => {
               initial="T"
               bgColor="#318194"
               imageLink={coriandreImage}
-              url="https://coriandre.netlify.app/"
+              url="https://ny-travel-agency.netlify.app/"
             />
             <CardWork
               classTag="wp"
