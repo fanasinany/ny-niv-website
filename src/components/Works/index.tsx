@@ -15,6 +15,7 @@ import wdTravelAgency from "../../images/works/wd-travelagency.webp";
 import coriandreImage from "../../images/works/coriandre.webp";
 import mampii from "../../images/works/mampii.webp";
 import belone from "../../images/works/belone.webp";
+import pixelz from "../../images/works/pixelz.webp";
 import TriangleIcon from "../Icons/TriangleIcon";
 
 const Works = () => {
@@ -42,17 +43,15 @@ const Works = () => {
               All
             </button>
             <button
-              className={`web-project-filter ${
-                activefilter === "wp" ? "active" : ""
-              }`}
+              className={`web-project-filter ${activefilter === "wp" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("wp")}
             >
               Web Project
             </button>
             <button
-              className={`web-design-filter ${
-                activefilter === "wd" ? "active" : ""
-              }`}
+              className={`web-design-filter ${activefilter === "wd" ? "active" : ""
+                }`}
               onClick={() => setActiveFilter("wd")}
             >
               Web Design
@@ -68,6 +67,16 @@ const Works = () => {
               bgColor="#8E7497"
               imageLink={mampii}
               url="https://www.mampii.com/"
+            />
+            <CardWork
+              classTag="wp"
+              title="PixelZ Solution"
+              tags={["gatsby", "html", "css"]}
+              description="A website for an web and design agency"
+              initial="P"
+              bgColor="#292164"
+              imageLink={pixelz}
+              url="https://pixelz-solution.com/"
             />
             <CardWork
               classTag="wd"
