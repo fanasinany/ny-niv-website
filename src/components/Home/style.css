@@ -72,7 +72,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.3s;
-    background-position: center;
     filter: grayscale(1);
 }
 
