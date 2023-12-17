@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import imageMeta from "../../images/face.webp";
 import iconTag from "../../images/favicon.png";
 
 function Metatags() {
@@ -20,7 +21,7 @@ function Metatags() {
         property="og:description"
         content="A young boy passionate of IT and UI/UX. I'm a Developer Front End and a Web Designer too."
       />
-      <meta property="og:image" content="https://ny-nivoarijaona.com/static/face-50152a0e05b4cb3c4274331c84783af2.webp" />
+      <meta property="og:image" content={imageMeta} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://www.ny-nivoarijaona.com" />
@@ -32,7 +33,7 @@ function Metatags() {
         property="twitter:description"
         content="A young boy passionate of IT and UI/UX. I'm a Developer Front End and a Web Designer too."
       />
-      <meta property="twitter:image" content="https://ny-nivoarijaona.com/static/face-50152a0e05b4cb3c4274331c84783af2.webp" />
+      <meta property="twitter:image" content={imageMeta} />
 
       <meta
         name="description"
