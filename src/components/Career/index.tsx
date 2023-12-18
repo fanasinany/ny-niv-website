@@ -93,15 +93,7 @@ const Career = () => {
                 className="vertical-timeline-content "
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={
-                  <CountUp end={2020} duration={2} start={2000} redraw={true}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                }
+                date={"2020"}
                 icon={<>LS</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
@@ -131,15 +123,7 @@ const Career = () => {
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={
-                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                }
+                date={"2019"}
                 icon={<>ENI</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
@@ -167,15 +151,7 @@ const Career = () => {
                 className="vertical-timeline-content"
                 contentStyle={{ background: "#f3f3f3", color: "#535661" }}
                 contentArrowStyle={{ borderRight: "7px solid  #f3f3f3" }}
-                date={
-                  <CountUp end={2019} duration={2} start={2000} redraw={true}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                }
+                date={"2019"}
                 icon={<>AUX</>}
                 dateClassName="date-timeline"
                 iconClassName="icon-timeline"
